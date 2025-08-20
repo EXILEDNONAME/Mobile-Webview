@@ -1,0 +1,204 @@
+kotlin version: 2.0.21
+error message: org.jetbrains.kotlin.backend.common.BackendException: Backend Internal error: Exception during IR lowering
+File being compiled: C:/Users/Administrator/AndroidStudioProjects/EXILEDNONAME/app/src/main/java/com/example/exilednoname/SplashActivity.kt
+The root cause java.lang.RuntimeException was thrown at: org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:47)
+	at org.jetbrains.kotlin.backend.common.CodegenUtil.reportBackendException(CodegenUtil.kt:253)
+	at org.jetbrains.kotlin.backend.common.CodegenUtil.reportBackendException$default(CodegenUtil.kt:236)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invokeSequential(performByIrFile.kt:65)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invoke(performByIrFile.kt:52)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invoke(performByIrFile.kt:38)
+	at org.jetbrains.kotlin.backend.common.phaser.NamedCompilerPhase.phaseBody(CompilerPhase.kt:166)
+	at org.jetbrains.kotlin.backend.common.phaser.AbstractNamedCompilerPhase.invoke(CompilerPhase.kt:113)
+	at org.jetbrains.kotlin.backend.common.phaser.CompositePhase.invoke(PhaseBuilders.kt:27)
+	at org.jetbrains.kotlin.backend.common.phaser.CompositePhase.invoke(PhaseBuilders.kt:14)
+	at org.jetbrains.kotlin.backend.common.phaser.NamedCompilerPhase.phaseBody(CompilerPhase.kt:166)
+	at org.jetbrains.kotlin.backend.common.phaser.AbstractNamedCompilerPhase.invoke(CompilerPhase.kt:113)
+	at org.jetbrains.kotlin.backend.common.phaser.CompilerPhaseKt.invokeToplevel(CompilerPhase.kt:62)
+	at org.jetbrains.kotlin.backend.jvm.JvmIrCodegenFactory.invokeCodegen(JvmIrCodegenFactory.kt:371)
+	at org.jetbrains.kotlin.codegen.CodegenFactory.generateModule(CodegenFactory.kt:47)
+	at org.jetbrains.kotlin.backend.jvm.JvmIrCodegenFactory.generateModuleInFrontendIRMode(JvmIrCodegenFactory.kt:433)
+	at org.jetbrains.kotlin.cli.jvm.compiler.pipeline.JvmCompilerPipelineKt.generateCodeFromIr(jvmCompilerPipeline.kt:246)
+	at org.jetbrains.kotlin.cli.jvm.compiler.pipeline.JvmCompilerPipelineKt.compileModulesUsingFrontendIrAndLightTree(jvmCompilerPipeline.kt:142)
+	at org.jetbrains.kotlin.cli.jvm.K2JVMCompiler.doExecute(K2JVMCompiler.kt:148)
+	at org.jetbrains.kotlin.cli.jvm.K2JVMCompiler.doExecute(K2JVMCompiler.kt:43)
+	at org.jetbrains.kotlin.cli.common.CLICompiler.execImpl(CLICompiler.kt:103)
+	at org.jetbrains.kotlin.cli.common.CLICompiler.execImpl(CLICompiler.kt:49)
+	at org.jetbrains.kotlin.cli.common.CLITool.exec(CLITool.kt:101)
+	at org.jetbrains.kotlin.incremental.IncrementalJvmCompilerRunner.runCompiler(IncrementalJvmCompilerRunner.kt:464)
+	at org.jetbrains.kotlin.incremental.IncrementalJvmCompilerRunner.runCompiler(IncrementalJvmCompilerRunner.kt:73)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.doCompile(IncrementalCompilerRunner.kt:506)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.compileImpl(IncrementalCompilerRunner.kt:423)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.compileNonIncrementally(IncrementalCompilerRunner.kt:301)
+	at org.jetbrains.kotlin.incremental.IncrementalCompilerRunner.compile(IncrementalCompilerRunner.kt:129)
+	at org.jetbrains.kotlin.daemon.CompileServiceImplBase.execIncrementalCompiler(CompileServiceImpl.kt:675)
+	at org.jetbrains.kotlin.daemon.CompileServiceImplBase.access$execIncrementalCompiler(CompileServiceImpl.kt:92)
+	at org.jetbrains.kotlin.daemon.CompileServiceImpl.compile(CompileServiceImpl.kt:1660)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(Unknown Source)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Unknown Source)
+	at java.rmi/sun.rmi.transport.Transport$1.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Unknown Source)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(Unknown Source)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(Unknown Source)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.RuntimeException: Exception while generating code for:
+FUN name:onCreate visibility:protected modality:OPEN <> ($this:com.example.exilednoname.SplashActivity, savedInstanceState:android.os.Bundle?) returnType:kotlin.Unit
+  overridden:
+    protected/*protected and package*/ open fun onCreate (p0: @[EnhancedNullability] android.os.Bundle?): kotlin.Unit [fake_override] declared in androidx.appcompat.app.AppCompatActivity
+  $this: VALUE_PARAMETER name:<this> type:com.example.exilednoname.SplashActivity
+  VALUE_PARAMETER name:savedInstanceState index:0 type:android.os.Bundle?
+  BLOCK_BODY
+    CALL 'protected/*protected and package*/ open fun onCreate (p0: @[EnhancedNullability] android.os.Bundle?): kotlin.Unit [fake_override] declared in androidx.appcompat.app.AppCompatActivity' superQualifier='CLASS IR_EXTERNAL_JAVA_DECLARATION_STUB CLASS name:AppCompatActivity modality:OPEN visibility:public superTypes:[androidx.fragment.app.FragmentActivity; androidx.appcompat.app.AppCompatCallback; androidx.core.app.TaskStackBuilder.SupportParentable; androidx.appcompat.app.ActionBarDrawerToggle.DelegateProvider]' type=kotlin.Unit origin=null
+      $this: GET_VAR '<this>: com.example.exilednoname.SplashActivity declared in com.example.exilednoname.SplashActivity.onCreate' type=com.example.exilednoname.SplashActivity origin=null
+      p0: GET_VAR 'savedInstanceState: android.os.Bundle? declared in com.example.exilednoname.SplashActivity.onCreate' type=android.os.Bundle? origin=null
+    CALL 'public open fun setSystemUiVisibility (p0: kotlin.Int): kotlin.Unit declared in android.view.View' type=kotlin.Unit origin=EQ
+      $this: CALL 'public abstract fun getDecorView (): @[EnhancedNullability] android.view.View declared in android.view.Window' type=@[EnhancedNullability] android.view.View origin=GET_PROPERTY
+        $this: CALL 'public open fun getWindow (): @[FlexibleNullability] android.view.Window? [fake_override] declared in com.example.exilednoname.SplashActivity' type=@[FlexibleNullability] android.view.Window? origin=GET_PROPERTY
+          $this: GET_VAR '<this>: com.example.exilednoname.SplashActivity declared in com.example.exilednoname.SplashActivity.onCreate' type=com.example.exilednoname.SplashActivity origin=null
+      p0: CONST Int type=kotlin.Int value=260
+    CALL 'public open fun setContentView (p0: kotlin.Int): kotlin.Unit [fake_override] declared in com.example.exilednoname.SplashActivity' type=kotlin.Unit origin=null
+      $this: GET_VAR '<this>: com.example.exilednoname.SplashActivity declared in com.example.exilednoname.SplashActivity.onCreate' type=com.example.exilednoname.SplashActivity origin=null
+      p0: GET_FIELD 'FIELD IR_EXTERNAL_JAVA_DECLARATION_STUB name:activity_splash type:kotlin.Int visibility:public [static] declared in com.example.exilednoname.R.layout' type=kotlin.Int superQualifierSymbol=com.example.exilednoname.R.layout origin=null
+    VAR name:logo type:@[FlexibleNullability] android.widget.ImageView? [val]
+      CALL 'public open fun findViewById <T> (p0: kotlin.Int): @[FlexibleNullability] T of com.example.exilednoname.SplashActivity.findViewById? [fake_override] declared in com.example.exilednoname.SplashActivity' type=@[FlexibleNullability] android.widget.ImageView? origin=null
+        <T>: @[FlexibleNullability] android.widget.ImageView?
+        $this: GET_VAR '<this>: com.example.exilednoname.SplashActivity declared in com.example.exilednoname.SplashActivity.onCreate' type=com.example.exilednoname.SplashActivity origin=null
+        p0: GET_FIELD 'FIELD IR_EXTERNAL_JAVA_DECLARATION_STUB name:logoView type:kotlin.Int visibility:public [static] declared in com.example.exilednoname.R.id' type=kotlin.Int superQualifierSymbol=com.example.exilednoname.R.id origin=null
+    VAR name:title type:@[FlexibleNullability] android.widget.TextView? [val]
+      CALL 'public open fun findViewById <T> (p0: kotlin.Int): @[FlexibleNullability] T of com.example.exilednoname.SplashActivity.findViewById? [fake_override] declared in com.example.exilednoname.SplashActivity' type=@[FlexibleNullability] android.widget.TextView? origin=null
+        <T>: @[FlexibleNullability] android.widget.TextView?
+        $this: GET_VAR '<this>: com.example.exilednoname.SplashActivity declared in com.example.exilednoname.SplashActivity.onCreate' type=com.example.exilednoname.SplashActivity origin=null
+        p0: GET_FIELD 'FIELD IR_EXTERNAL_JAVA_DECLARATION_STUB name:titleView type:kotlin.Int visibility:public [static] declared in com.example.exilednoname.R.id' type=kotlin.Int superQualifierSymbol=com.example.exilednoname.R.id origin=null
+    VAR name:subtitle type:@[FlexibleNullability] android.widget.TextView? [val]
+      CALL 'public open fun findViewById <T> (p0: kotlin.Int): @[FlexibleNullability] T of com.example.exilednoname.SplashActivity.findViewById? [fake_override] declared in com.example.exilednoname.SplashActivity' type=@[FlexibleNullability] android.widget.TextView? origin=null
+        <T>: @[FlexibleNullability] android.widget.TextView?
+        $this: GET_VAR '<this>: com.example.exilednoname.SplashActivity declared in com.example.exilednoname.SplashActivity.onCreate' type=com.example.exilednoname.SplashActivity origin=null
+        p0: GET_FIELD 'FIELD IR_EXTERNAL_JAVA_DECLARATION_STUB name:subtitleView type:kotlin.Int visibility:public [static] declared in com.example.exilednoname.R.id' type=kotlin.Int superQualifierSymbol=com.example.exilednoname.R.id origin=null
+    VAR name:logoAnim type:@[FlexibleNullability] android.view.animation.Animation? [val]
+      CALL 'public open fun loadAnimation (p0: @[FlexibleNullability] android.content.Context?, p1: kotlin.Int): @[FlexibleNullability] android.view.animation.Animation? declared in android.view.animation.AnimationUtils' type=@[FlexibleNullability] android.view.animation.Animation? origin=null
+        p0: GET_VAR '<this>: com.example.exilednoname.SplashActivity declared in com.example.exilednoname.SplashActivity.onCreate' type=com.example.exilednoname.SplashActivity origin=null
+        p1: GET_FIELD 'FIELD IR_EXTERNAL_JAVA_DECLARATION_STUB name:wipe_in_up type:kotlin.Int visibility:public [static] declared in com.example.exilednoname.R.anim' type=kotlin.Int superQualifierSymbol=com.example.exilednoname.R.anim origin=null
+    VAR name:titleAnim type:@[FlexibleNullability] android.view.animation.Animation? [val]
+      CALL 'public open fun loadAnimation (p0: @[FlexibleNullability] android.content.Context?, p1: kotlin.Int): @[FlexibleNullability] android.view.animation.Animation? declared in android.view.animation.AnimationUtils' type=@[FlexibleNullability] android.view.animation.Animation? origin=null
+        p0: GET_VAR '<this>: com.example.exilednoname.SplashActivity declared in com.example.exilednoname.SplashActivity.onCreate' type=com.example.exilednoname.SplashActivity origin=null
+        p1: CALL 'public final fun apply <T> (block: @[ExtensionFunctionType] kotlin.Function1<T of kotlin.StandardKt.apply, kotlin.Unit>): T of kotlin.StandardKt.apply [inline] declared in kotlin.StandardKt' type=kotlin.Int origin=null
+          <T>: kotlin.Int
+          $receiver: GET_FIELD 'FIELD IR_EXTERNAL_JAVA_DECLARATION_STUB name:fade_in type:kotlin.Int visibility:public [static] declared in com.example.exilednoname.R.anim' type=kotlin.Int superQualifierSymbol=com.example.exilednoname.R.anim origin=null
+          block: BLOCK type=@[ExtensionFunctionType] kotlin.Function1<kotlin.Int, kotlin.Unit> origin=LAMBDA
+            COMPOSITE type=kotlin.Unit origin=null
+            FUNCTION_REFERENCE 'private final fun onCreate$lambda$0 (): kotlin.Unit declared in com.example.exilednoname.SplashActivity' type=@[ExtensionFunctionType] kotlin.Function1<kotlin.Int, kotlin.Unit> origin=INLINE_LAMBDA reflectionTarget=null
+    VAR name:subtitleAnim type:@[FlexibleNullability] android.view.animation.Animation? [val]
+      CALL 'public open fun loadAnimation (p0: @[FlexibleNullability] android.content.Context?, p1: kotlin.Int): @[FlexibleNullability] android.view.animation.Animation? declared in android.view.animation.AnimationUtils' type=@[FlexibleNullability] android.view.animation.Animation? origin=null
+        p0: GET_VAR '<this>: com.example.exilednoname.SplashActivity declared in com.example.exilednoname.SplashActivity.onCreate' type=com.example.exilednoname.SplashActivity origin=null
+        p1: CALL 'public final fun apply <T> (block: @[ExtensionFunctionType] kotlin.Function1<T of kotlin.StandardKt.apply, kotlin.Unit>): T of kotlin.StandardKt.apply [inline] declared in kotlin.StandardKt' type=kotlin.Int origin=null
+          <T>: kotlin.Int
+          $receiver: GET_FIELD 'FIELD IR_EXTERNAL_JAVA_DECLARATION_STUB name:fade_in type:kotlin.Int visibility:public [static] declared in com.example.exilednoname.R.anim' type=kotlin.Int superQualifierSymbol=com.example.exilednoname.R.anim origin=null
+          block: BLOCK type=@[ExtensionFunctionType] kotlin.Function1<kotlin.Int, kotlin.Unit> origin=LAMBDA
+            COMPOSITE type=kotlin.Unit origin=null
+            FUNCTION_REFERENCE 'private final fun onCreate$lambda$1 (): kotlin.Unit declared in com.example.exilednoname.SplashActivity' type=@[ExtensionFunctionType] kotlin.Function1<kotlin.Int, kotlin.Unit> origin=INLINE_LAMBDA reflectionTarget=null
+    CALL 'public open fun startAnimation (p0: @[FlexibleNullability] android.view.animation.Animation?): kotlin.Unit [fake_override] declared in android.widget.ImageView' type=kotlin.Unit origin=null
+      $this: GET_VAR 'val logo: @[FlexibleNullability] android.widget.ImageView? [val] declared in com.example.exilednoname.SplashActivity.onCreate' type=@[FlexibleNullability] android.widget.ImageView? origin=null
+      p0: GET_VAR 'val logoAnim: @[FlexibleNullability] android.view.animation.Animation? [val] declared in com.example.exilednoname.SplashActivity.onCreate' type=@[FlexibleNullability] android.view.animation.Animation? origin=null
+    CALL 'public open fun startAnimation (p0: @[FlexibleNullability] android.view.animation.Animation?): kotlin.Unit [fake_override] declared in android.widget.TextView' type=kotlin.Unit origin=null
+      $this: GET_VAR 'val title: @[FlexibleNullability] android.widget.TextView? [val] declared in com.example.exilednoname.SplashActivity.onCreate' type=@[FlexibleNullability] android.widget.TextView? origin=null
+      p0: GET_VAR 'val titleAnim: @[FlexibleNullability] android.view.animation.Animation? [val] declared in com.example.exilednoname.SplashActivity.onCreate' type=@[FlexibleNullability] android.view.animation.Animation? origin=null
+    CALL 'public open fun startAnimation (p0: @[FlexibleNullability] android.view.animation.Animation?): kotlin.Unit [fake_override] declared in android.widget.TextView' type=kotlin.Unit origin=null
+      $this: GET_VAR 'val subtitle: @[FlexibleNullability] android.widget.TextView? [val] declared in com.example.exilednoname.SplashActivity.onCreate' type=@[FlexibleNullability] android.widget.TextView? origin=null
+      p0: GET_VAR 'val subtitleAnim: @[FlexibleNullability] android.view.animation.Animation? [val] declared in com.example.exilednoname.SplashActivity.onCreate' type=@[FlexibleNullability] android.view.animation.Animation? origin=null
+    COMPOSITE type=kotlin.Unit origin=null
+      CALL 'public final fun postDelayed (p0: @[EnhancedNullability] java.lang.Runnable, p1: kotlin.Long): kotlin.Boolean declared in android.os.Handler' type=kotlin.Boolean origin=null
+        $this: CONSTRUCTOR_CALL 'public constructor <init> (p0: @[EnhancedNullability] android.os.Looper) declared in android.os.Handler' type=android.os.Handler origin=null
+          p0: CALL 'public open fun getMainLooper (): @[FlexibleNullability] android.os.Looper? declared in android.os.Looper' type=@[FlexibleNullability] android.os.Looper? origin=null
+        p0: BLOCK type=java.lang.Runnable origin=LAMBDA
+          COMPOSITE type=kotlin.Unit origin=null
+          CALL 'public final fun <jvm-indy> <T> (dynamicCall: T of kotlin.jvm.internal.<jvm-indy>, bootstrapMethodHandle: kotlin.Any, vararg bootstrapMethodArguments: kotlin.Any): T of kotlin.jvm.internal.<jvm-indy> declared in kotlin.jvm.internal' type=java.lang.Runnable origin=null
+            <T>: java.lang.Runnable
+            dynamicCall: CALL 'public final fun run (p0: com.example.exilednoname.SplashActivity): java.lang.Runnable declared in kotlin.jvm.internal.invokeDynamic' type=java.lang.Runnable origin=null
+              p0: GET_VAR '<this>: com.example.exilednoname.SplashActivity declared in com.example.exilednoname.SplashActivity.onCreate' type=com.example.exilednoname.SplashActivity origin=null
+            bootstrapMethodHandle: CALL 'public final fun <jvm-method-handle> (tag: kotlin.Int, owner: kotlin.String, name: kotlin.String, descriptor: kotlin.String, isInterface: kotlin.Boolean): kotlin.Any declared in kotlin.jvm.internal' type=kotlin.Any origin=null
+              tag: CONST Int type=kotlin.Int value=6
+              owner: CONST String type=kotlin.String value="java/lang/invoke/LambdaMetafactory"
+              name: CONST String type=kotlin.String value="metafactory"
+              descriptor: CONST String type=kotlin.String value="(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;"
+              isInterface: CONST Boolean type=kotlin.Boolean value=false
+            bootstrapMethodArguments: VARARG type=kotlin.Array<kotlin.Any> varargElementType=kotlin.Any
+              CALL 'public final fun <jvm-original-method-type> (method: kotlin.Any): kotlin.Any declared in kotlin.jvm.internal' type=kotlin.Any origin=null
+                method: RAW_FUNCTION_REFERENCE 'public abstract fun run (): kotlin.Unit declared in java.lang.Runnable' type=kotlin.Any
+              RAW_FUNCTION_REFERENCE 'private final fun onCreate$lambda$2 (this$0: com.example.exilednoname.SplashActivity): kotlin.Unit declared in com.example.exilednoname.SplashActivity' type=kotlin.Any
+              CALL 'public final fun <jvm-original-method-type> (method: kotlin.Any): kotlin.Any declared in kotlin.jvm.internal' type=kotlin.Any origin=null
+                method: RAW_FUNCTION_REFERENCE 'public abstract fun run (): kotlin.Unit [fake_override] declared in kotlin.jvm.internal.invokeDynamic.<fake>' type=kotlin.Any
+        p1: CONST Long type=kotlin.Long value=1600
+      COMPOSITE type=kotlin.Unit origin=null
+
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:47)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate$default(FunctionCodegen.kt:40)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generateMethodNode(ClassCodegen.kt:406)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generateMethod(ClassCodegen.kt:423)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ClassCodegen.generate(ClassCodegen.kt:168)
+	at org.jetbrains.kotlin.backend.jvm.FileCodegen.lower(JvmPhases.kt:39)
+	at org.jetbrains.kotlin.backend.common.phaser.PhaseFactoriesKt.createFilePhase$lambda$4(PhaseFactories.kt:71)
+	at org.jetbrains.kotlin.backend.common.phaser.PhaseBuildersKt$createSimpleNamedCompilerPhase$1.phaseBody(PhaseBuilders.kt:69)
+	at org.jetbrains.kotlin.backend.common.phaser.SimpleNamedCompilerPhase.phaseBody(CompilerPhase.kt:226)
+	at org.jetbrains.kotlin.backend.common.phaser.AbstractNamedCompilerPhase.invoke(CompilerPhase.kt:113)
+	at org.jetbrains.kotlin.backend.common.phaser.PerformByIrFilePhase.invokeSequential(performByIrFile.kt:62)
+	... 43 more
+Caused by: java.lang.RuntimeException: Exception while generating code for:
+FUN INLINE_LAMBDA name:onCreate$lambda$0 visibility:private modality:FINAL <> ($receiver:kotlin.Int) returnType:kotlin.Unit
+  $receiver: VALUE_PARAMETER name:$this$apply type:kotlin.Int
+  BLOCK_BODY
+    VAR name:$i$a$-apply-SplashActivity$onCreate$titleAnim$1 type:kotlin.Int [val]
+      CONST Int type=kotlin.Int value=0
+    SET_FIELD 'FIELD IR_EXTERNAL_JAVA_DECLARATION_STUB name:startOffset type:kotlin.Int visibility:public [final,static] declared in android.R.attr' type=kotlin.Unit superQualifierSymbol=android.R.attr origin=EQ
+      value: CONST Int type=kotlin.Int value=300
+
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:47)
+	at org.jetbrains.kotlin.backend.jvm.codegen.IrSourceCompilerForInline.generateLambdaBody(IrSourceCompilerForInline.kt:67)
+	at org.jetbrains.kotlin.codegen.inline.ExpressionLambda.generateLambdaBody(LambdaInfo.kt:72)
+	at org.jetbrains.kotlin.backend.jvm.codegen.IrInlineCodegen.genValueAndPut(IrInlineCodegen.kt:100)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall$handleParameter(ExpressionCodegen.kt:616)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall(ExpressionCodegen.kt:644)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.expressions.IrCall.accept(IrCall.kt:24)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.gen(ExpressionCodegen.kt:217)
+	at org.jetbrains.kotlin.backend.jvm.codegen.IrCallGenerator.genValueAndPut(IrCallGenerator.kt:48)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall$handleParameter(ExpressionCodegen.kt:616)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall(ExpressionCodegen.kt:644)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitCall(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.expressions.IrCall.accept(IrCall.kt:24)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitVariable(ExpressionCodegen.kt:790)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitVariable(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.declarations.IrVariable.accept(IrVariable.kt:36)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:579)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlockBody(ExpressionCodegen.kt:584)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlockBody(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.expressions.IrBlockBody.accept(IrBlockBody.kt:20)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.generate(ExpressionCodegen.kt:240)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.doGenerate(FunctionCodegen.kt:123)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:44)
+	... 53 more
+Caused by: java.lang.AssertionError: access of const val: SET_FIELD 'FIELD IR_EXTERNAL_JAVA_DECLARATION_STUB name:startOffset type:kotlin.Int visibility:public [final,static] declared in android.R.attr' type=kotlin.Unit superQualifierSymbol=android.R.attr origin=EQ
+  value: CONST Int type=kotlin.Int value=300
+
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitFieldAccess(ExpressionCodegen.kt:861)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitFieldAccess(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.visitors.IrElementVisitor$DefaultImpls.visitSetField(IrElementVisitor.kt:206)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitSetField(ExpressionCodegen.kt:908)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitSetField(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.expressions.IrSetField.accept(IrSetField.kt:21)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitStatementContainer(ExpressionCodegen.kt:579)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlockBody(ExpressionCodegen.kt:584)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.visitBlockBody(ExpressionCodegen.kt:138)
+	at org.jetbrains.kotlin.ir.expressions.IrBlockBody.accept(IrBlockBody.kt:20)
+	at org.jetbrains.kotlin.backend.jvm.codegen.ExpressionCodegen.generate(ExpressionCodegen.kt:240)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.doGenerate(FunctionCodegen.kt:123)
+	at org.jetbrains.kotlin.backend.jvm.codegen.FunctionCodegen.generate(FunctionCodegen.kt:44)
+	... 76 more
+
+
