@@ -13,6 +13,8 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
+        window.statusBarColor = android.graphics.Color.BLACK
+
         Handler(Looper.getMainLooper()).postDelayed({
             goToMainActivity()
         }, 3000L)

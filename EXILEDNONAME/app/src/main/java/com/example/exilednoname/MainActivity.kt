@@ -58,6 +58,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        window.statusBarColor = android.graphics.Color.BLACK
+
         // ✅ Permission untuk Android < 11
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.R) {
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
@@ -81,6 +83,8 @@ class MainActivity : ComponentActivity() {
         webView.settings.domStorageEnabled = true
 
         webView.addJavascriptInterface(JsBridge(this), "Android")
+        swipeRefresh.setOnChildScrollUpCallback { _, _ -> webView.scrollY > 0 }
+        swipeRefresh.setOnRefreshListener { webView.reload() }
 
         // ✅ WebChromeClient untuk upload file
         webView.webChromeClient = object : WebChromeClient() {
