@@ -8,21 +8,21 @@
     android:background="@android:color/black"
     tools:context=".SplashActivity">
 
-    <!--    <TextView-->
-<!--        android:id="@+id/tv_app_name"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="2dp"-->
-<!--        android:includeFontPadding="false"-->
-<!--        android:text="@string/app_name"-->
-<!--        android:textColor="@color/dark"-->
-<!--        android:textSize="26sp"-->
-<!--        android:textStyle="bold"-->
-<!--        android:fontFamily="sans-serif-medium"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.497"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/iv_logo" />-->
+    <TextView
+        android:id="@+id/tv_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="sans-serif-medium"
+        android:includeFontPadding="false"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_logo" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iv_logo"
@@ -39,9 +39,9 @@
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:layout_width="260dp"
         android:layout_height="32dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="100dp"
         android:indeterminate="true"
-        android:indeterminateTint="@color/primary"
+        android:indeterminateTint="@color/purple_200"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
