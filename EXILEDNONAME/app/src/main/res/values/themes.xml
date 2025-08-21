@@ -2,4 +2,9 @@
 <resources>
 
     <style name="Theme.EXILEDNONAME" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="AppTheme" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:statusBarColor">@color/white</item>
+    </style>
 </resources>
